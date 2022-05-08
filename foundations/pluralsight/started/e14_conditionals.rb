@@ -35,3 +35,7 @@ word_count[word] += 1
 #refactorando en base a esto
 word_count[word] = 0 if !word_count[word]
 word_count[word] += 1
+
+#refactoring 2
+word_count[word] = 0 unless word_count[word]
+word_count[word] = 1
