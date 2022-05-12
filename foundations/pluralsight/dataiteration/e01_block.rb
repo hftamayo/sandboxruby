@@ -43,3 +43,16 @@ end
 greet do |name|
     puts "Hello #{name}"
 end
+
+
+#ejemplo de block con call
+def greet1(question, &my_block)
+    puts question
+    name = gets.chomp
+    my_block.call(name)
+end
+
+greet1("what's your name?") do |name|
+    puts "Hello #{name}"
+end
+
