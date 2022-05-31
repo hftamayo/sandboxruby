@@ -55,7 +55,8 @@ def insertionSort1(n, arr)
     # Write your code here
     rightest = arr[-1]
     
-    arr.limit(n-1).reverse.each_with_index! do |value, key|
+    #limit pertenece a ActiveRecord de RoR arr.limit(n-1).reverse.each_with_index! do |value, key|
+    arr.first(n-1).reverse.each_with_index! do |value, key|
         value >= rightest ? arr[key+1] = value : arr[key] = rightest
         arr
     end
